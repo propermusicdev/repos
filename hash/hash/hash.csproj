@@ -57,4 +57,7 @@
     <Content Include="Calculator.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy $(TargetPath) \\PMD-BASIL\BasilData\SecretApps\ /y /q</PostBuildEvent>
+  </PropertyGroup>
 </Project>
